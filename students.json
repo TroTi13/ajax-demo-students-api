@@ -1,0 +1,40 @@
+{
+  "students": [
+    {
+      "id": 1,
+      "firstname": "John",
+      "lastname": "Doe",
+      "age": 20,
+      "email": "john.doe@example.com",
+      "major": "MCT",
+      "profile": "Web"
+    },
+    {
+      "id": 2,
+      "firstname": "Jane",
+      "lastname": "Smith",
+      "age": 22,
+      "email": "jane.smith@example.com",
+      "major": "MCT",
+      "profile": "3D"
+    },
+    {
+      "id": 3,
+      "firstname": "Alice",
+      "lastname": "Johnson",
+      "age": 21,
+      "email": "alice.johnson@example.com",
+      "major": "MCT",
+      "profile": "AV"
+    },
+    {
+      "id": 4,
+      "firstname": "Bob",
+      "lastname": "Brown",
+      "age": 23,
+      "email": "bob.brown@example.com",
+      "major": "MCT",
+      "profile": "Web"
+    }
+  ]
+}

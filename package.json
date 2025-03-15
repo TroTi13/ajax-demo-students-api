@@ -1,0 +1,21 @@
+{
+  "name": "students-api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "pm2 start index.js --watch --name students-api",
+    "dev": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "body-parser": "^1.20.3",
+    "express": "^4.21.2"
+  },
+  "dependencies": {
+    "cors": "^2.8.5"
+  }
+}
