@@ -23,6 +23,16 @@ app.use(express.static('public'));
 app.get('/students', (req, res) => {
   res.json(students);
 });
+
+app.get('/students/:id', (req, res) => {
+  const { id } = req.params;
+  const student = students.find((student) => student.id === parseInt(id));
+  if (!student) {
+    return res.status(404).json({ message: 'Student not found' });
+  }
+  res.json(student);
+});
+
 app.get('/students/:profile', (req, res) => {
   const { profile } = req.params;
   const _students = students.filter((student) => student.profile.toLowerCase() === profile.toLowerCase());
