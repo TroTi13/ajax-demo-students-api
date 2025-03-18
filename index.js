@@ -8,7 +8,7 @@ import data from './students.json' with { type: 'json' };
 let students = data.students;
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
 const corsOptions = {
   origin: '*', // Allow all origins
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
@@ -39,7 +39,9 @@ app.get('/students/:profile', (req, res) => {
   
   res.json(_students);
 });
+
 app.post('/students', (req, res) => {
+  console.log('POST /students', req.body);
   const { profile, firstname, lastname, age, email } = req.body;
   console.log(profile);
   const newStudent = {
@@ -54,6 +56,7 @@ app.post('/students', (req, res) => {
   students.push(newStudent);
   res.status(201).json(newStudent);
 });
+
 app.put('/students/:id', (req, res) => {
   const { id } = req.params;
   const { profile, firstname, lastname, age, email } = req.body;
@@ -78,6 +81,7 @@ app.put('/students/:id', (req, res) => {
   students[studentIndex] = _student;
   res.json(_student);
 });
+
 app.delete('/students/:id', (req, res) => {
   const { id } = req.params;
   const studentIndex = students.findIndex((student) => student.id === parseInt(id));
@@ -85,7 +89,7 @@ app.delete('/students/:id', (req, res) => {
     return res.status(404).json({ message: 'Student not found' });
   }
   students.splice(studentIndex, 1);
-  res.status(204).json({
+  res.status(200).json({
     message: 'Student deleted successfully',
   });
 });

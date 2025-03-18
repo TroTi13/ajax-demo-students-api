@@ -1,0 +1,12 @@
+html {
+  font-family: sans-serif;
+}
+
+.student {
+  border: 1px solid #ccc;
+  display: flex;
+  flex-flow: column;
+  gap: 4px;
+  padding: 8px;
+  margin-bottom: 8px;
+}
