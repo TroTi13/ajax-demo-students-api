@@ -5,7 +5,10 @@
   "type": "module",
   "scripts": {
     "start": "pm2 start index.js --watch --name students-api",
-    "dev": "node index.js"
+    "dev": "node index.js",
+    "stop": "pm2 stop students-api",
+    "restart": "pm2 restart students-api",
+    "logs": "pm2 logs students-api"
   },
   "keywords": [],
   "author": "",

@@ -8,7 +8,7 @@ import data from './students.json' with { type: 'json' };
 let students = data.students;
 
 const app = express();
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3000;
 const corsOptions = {
   origin: '*', // Allow all origins
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
